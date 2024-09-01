@@ -11,7 +11,7 @@ const server = Bun.serve({
 `;
       return new Response(html, {
         headers: {
-          "content-type": "text/htm",
+          "content-type": "text/html",
         },
       });
     }
