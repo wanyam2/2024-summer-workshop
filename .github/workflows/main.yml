@@ -58,6 +58,6 @@ jobs:
 
       - name: 개인 서버에 SSH 프록시 점프로 연결
         run: |
-          ssh -J ${{secrets.SSH_BASTON_USER}}@${{secrets.SSH_BASTION_HOST}}:10020 \
+          ssh -J ${{secrets.SSH_BASTION_USER}}@${{secrets.SSH_BASTION_HOST}}:10020 \
               -o StrictHostKeyChecking=no -i /tmp/new_id \
               ${{secrets.SSH_TARGET_USER}}@${{secrets.SSH_TARGET_HOST}} "echo 개인서버에 연결 성공"
